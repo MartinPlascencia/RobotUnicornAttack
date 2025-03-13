@@ -15,8 +15,19 @@ public class PlatformsMovement : MonoBehaviour
     public bool CanMove { set => canMove = value; }
     private Vector3 startingPosition;
     private float speed;
+    private float pastSpeed;
     private Vector3 movedDistance;
 
+    public void SpeedUp(float speedMultiplier)
+    {
+        pastSpeed = speed;
+        speed *= speedMultiplier;
+    }
+
+    public void SpeedDown()
+    {
+        speed = pastSpeed;
+    }
     private void Start()
     {
         startingPosition = transform.position;
