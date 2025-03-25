@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Jump : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class Jump : MonoBehaviour
     private float jumpBoost = 0.5f;
     [SerializeField]
     private int maxJumps = 2;
+    [SerializeField]
+    private UnityEvent onJump;
+    [SerializeField]
+    private UnityEvent onLand;
     private int jumps;
     private Rigidbody rb;
     private bool isGrounded;
@@ -43,6 +48,7 @@ public class Jump : MonoBehaviour
         buttonPressed = true;
         if (isGrounded || jumps > 0)
         {
+            onJump?.Invoke();
             jumps--;
             isJumping = true;
             jumpTimeCounter = maxJumpTime;
@@ -84,6 +90,7 @@ public class Jump : MonoBehaviour
         {
             RestartJumps();
             isGrounded = true;
+            onLand?.Invoke();
         }
     }
 }
