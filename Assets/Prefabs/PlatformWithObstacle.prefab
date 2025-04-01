@@ -118,6 +118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8470444736251474419}
   - component: {fileID: 901502601286637610}
+  - component: {fileID: -1355277289045647452}
   m_Layer: 0
   m_Name: PlatformWithObstacle
   m_TagString: DeadZone
@@ -164,6 +165,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 11.06, y: 1, z: 9.09}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-1355277289045647452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809750341895470658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6c8d8d62939034e8f597fc1927a1ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3022909563711474433
 GameObject:
   m_ObjectHideFlags: 0
