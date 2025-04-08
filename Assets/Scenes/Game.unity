@@ -3263,7 +3263,19 @@ MonoBehaviour:
         m_CallState: 2
   onShowTimer:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1725872734}
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+        m_MethodName: StartTimer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   secondsToRestart: 3
   finalSecondsToRestart: 5
   secondsToShowGameOverScreen: 3
@@ -3820,6 +3832,7 @@ GameObject:
   - component: {fileID: 1725872731}
   - component: {fileID: 1725872733}
   - component: {fileID: 1725872732}
+  - component: {fileID: 1725872734}
   m_Layer: 5
   m_Name: StartsInText
   m_TagString: Untagged
@@ -3889,6 +3902,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725872730}
   m_CullTransparentMesh: 1
+--- !u!114 &1725872734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725872730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ffb143232a61b47bb648f3af8bca3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 774480478}
+  onSecondPassed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1762239419
 GameObject:
   m_ObjectHideFlags: 0
